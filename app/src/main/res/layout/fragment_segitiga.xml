@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".SegitigaFragment">
+    <data>
+        <variable name="luas2" type="Double"/>
+        <variable name="keliling2" type="Double"/>
+    </data>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/segitigaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Segitiga"
+                    android:textSize="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/txtSegitiga"/>
+
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Alas"
+                    android:ems="10"
+                    android:id="@+id/aSegitiga"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSegitiga"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="8dp"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Tinggi"
+                    android:ems="10"
+                    android:id="@+id/tSegitiga"
+                    app:layout_constraintEnd_toEndOf="@+id/aSegitiga"
+                    app:layout_constraintStart_toStartOf="@+id/aSegitiga"
+                    app:layout_constraintTop_toBottomOf="@+id/aSegitiga"
+                    android:layout_marginTop="25dp"/>
+
+            <Button
+                    android:id="@+id/hitungSegitiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hitung"
+                    app:layout_constraintStart_toStartOf="@+id/tSegitiga"
+                    app:layout_constraintTop_toBottomOf="@+id/tSegitiga"
+                    android:layout_marginTop="20dp"/>
+
+            <TextView
+                    android:id="@+id/luasSegitiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luas: "
+                    android:textSize="24dp"
+                    app:layout_constraintStart_toStartOf="@+id/hitungSegitiga"
+                    app:layout_constraintTop_toBottomOf="@+id/hitungSegitiga"
+                    app:layout_constraintEnd_toEndOf="@+id/hitungSegitiga"
+                    android:layout_marginTop="15dp"
+            />
+
+            <TextView
+                    android:id="@+id/kelilingSegitiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keliling: "
+                    android:textSize="24dp"
+                    app:layout_constraintStart_toStartOf="@+id/luasSegitiga"
+                    app:layout_constraintTop_toBottomOf="@+id/luasSegitiga"
+                    app:layout_constraintEnd_toEndOf="@+id/luasSegitiga"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+            <TextView
+                    android:id="@+id/txtLuasSegitiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{luas2.toString()}"
+                    android:textSize="24dp"
+                    app:layout_constraintTop_toTopOf="@+id/luasSegitiga"
+                    app:layout_constraintBottom_toBottomOf="@+id/luasSegitiga"
+                    app:layout_constraintStart_toEndOf="@+id/luasSegitiga"
+                    app:layout_goneMarginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+            <TextView
+                    android:id="@+id/txtKelilingSegitiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{keliling2.toString()}"
+                    android:textSize="24dp"
+                    app:layout_constraintTop_toTopOf="@+id/kelilingSegitiga"
+                    app:layout_constraintBottom_toBottomOf="@+id/kelilingSegitiga"
+                    app:layout_constraintStart_toEndOf="@+id/kelilingSegitiga"
+                    app:layout_goneMarginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+            <Button
+                    android:id="@+id/shareSegitiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    app:layout_constraintStart_toStartOf="@+id/kelilingSegitiga"
+                    app:layout_constraintTop_toBottomOf="@+id/kelilingSegitiga"
+                    app:layout_constraintEnd_toEndOf="@+id/kelilingSegitiga"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

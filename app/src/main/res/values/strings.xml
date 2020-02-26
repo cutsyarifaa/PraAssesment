@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pra Assesment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share_data">Luas = %1$d, Keliling = %2$d</string>
+</resources>

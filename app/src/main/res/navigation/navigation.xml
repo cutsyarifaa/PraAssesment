@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation" app:startDestination="@id/titleFragment">
+
+    <fragment android:id="@+id/titleFragment" android:name="org.d3ifcool4012.myapplication.TitleFragment"
+              android:label="TitleFragment"
+    tools:layout="@layout/fragment_title">
+        <action android:id="@+id/action_titleFragment_to_persegiPanjangFragment"
+                app:destination="@id/persegiPanjangFragment"/>
+        <action android:id="@+id/action_titleFragment_to_segitigaFragment" app:destination="@id/segitigaFragment"/>
+    </fragment>
+    <fragment android:id="@+id/persegiPanjangFragment"
+              android:name="org.d3ifcool4012.myapplication.PersegiPanjangFragment"
+              android:label="fragment_persegi_panjang" tools:layout="@layout/fragment_persegi_panjang"/>
+    <fragment android:id="@+id/segitigaFragment" android:name="org.d3ifcool4012.myapplication.SegitigaFragment"
+              android:label="fragment_segitiga" tools:layout="@layout/fragment_segitiga"/>
+    <fragment android:id="@+id/aboutFragment" android:name="org.d3ifcool4012.myapplication.AboutFragment"
+              android:label="fragment_about" tools:layout="@layout/fragment_about"/>
+</navigation>
